@@ -1,0 +1,252 @@
+[
+    {
+        "name": "AI Sales Closer Agent",
+        "category": "Sales",
+        "description": "Converte leads qualificados em clientes fechando vendas via chat."
+    },
+    {
+        "name": "Lead Scoring Agent",
+        "category": "Sales",
+        "description": "Analisa o comportamento do lead e atribui pontuações de interesse."
+    },
+    {
+        "name": "Multi Channel Outreach Agent",
+        "category": "Sales",
+        "description": "Inicia conversas em múltiplos canais simultaneamente."
+    },
+    {
+        "name": "AI SDR Agent",
+        "category": "Sales",
+        "description": "Qualifica leads frios e agenda demonstrações automaticamente."
+    },
+    {
+        "name": "Funnel Optimization Agent",
+        "category": "Sales",
+        "description": "Sugere melhorias contínuas baseadas no funil de vendas."
+    },
+    {
+        "name": "Upsell Cross Sell Agent",
+        "category": "Sales",
+        "description": "Identifica oportunidades de lucro extra com clientes atuais."
+    },
+    {
+        "name": "Abandoned Cart Recovery Agent",
+        "category": "Sales",
+        "description": "Envia incentivos para clientes que deixaram o checkout."
+    },
+    {
+        "name": "Client Retention Agent",
+        "category": "Sales",
+        "description": "Monitora sinais de churn e ativa campanhas de fidelidade."
+    },
+    {
+        "name": "Sales Call Analyzer Agent",
+        "category": "Sales",
+        "description": "Extrai insights e sentimentos de gravações de chamadas."
+    },
+    {
+        "name": "Pricing Strategy Agent",
+        "category": "Sales",
+        "description": "Ajusta preços dinamicamente baseados na demanda e concorrência."
+    },
+    {
+        "name": "Multilingual Support Agent",
+        "category": "Support",
+        "description": "Atendimento em mais de 50 idiomas com tradução em tempo real."
+    },
+    {
+        "name": "Ticket Routing Agent",
+        "category": "Support",
+        "description": "Encaminha chamados para os departamentos corretos instantaneamente."
+    },
+    {
+        "name": "Knowledge Base Agent",
+        "category": "Support",
+        "description": "Cria e atualiza artigos de FAQ baseados em conversas comuns."
+    },
+    {
+        "name": "Customer Sentiment Analyzer",
+        "category": "Support",
+        "description": "Detecta frustração em clientes antes que o problema escale."
+    },
+    {
+        "name": "Complaint Resolver Agent",
+        "category": "Support",
+        "description": "Gere reclamações e propõe soluções de acordo com regras da empresa."
+    },
+    {
+        "name": "Refund Automation Agent",
+        "category": "Support",
+        "description": "Processa reembolsos de forma justa e automática seguindo a política."
+    },
+    {
+        "name": "SLA Monitoring Agent",
+        "category": "Support",
+        "description": "Garante que o tempo de resposta esteja dentro dos limites acordados."
+    },
+    {
+        "name": "Voice Support Agent",
+        "category": "Support",
+        "description": "Assistente de voz para atendimento telefônico básico."
+    },
+    {
+        "name": "Customer Success Agent",
+        "category": "Support",
+        "description": "Ajuda o cliente a tirar o máximo proveito do produto após a compra."
+    },
+    {
+        "name": "Escalation Detection Agent",
+        "category": "Support",
+        "description": "Identifica quando uma conversa precisa de intervenção humana."
+    },
+    {
+        "name": "Ad Campaign Manager Agent",
+        "category": "Marketing",
+        "description": "Otimiza orçamentos e criativos de anúncios em tempo real."
+    },
+    {
+        "name": "Competitor Analysis Agent",
+        "category": "Marketing",
+        "description": "Monitora movimentos e promoções dos concorrentes diariamente."
+    },
+    {
+        "name": "SEO Strategy Agent",
+        "category": "Marketing",
+        "description": "Gera pautas de conteúdo focadas em rankeamento orgânico."
+    },
+    {
+        "name": "Content Calendar Agent",
+        "category": "Marketing",
+        "description": "Agenda e planeja postagens em todas as redes sociais."
+    },
+    {
+        "name": "Viral Trend Detection Agent",
+        "category": "Marketing",
+        "description": "Identifica tendências emergentes para surfamos na onda do hype."
+    },
+    {
+        "name": "Influencer Outreach Agent",
+        "category": "Marketing",
+        "description": "Encontra e contacta influenciadores alinhados com a marca."
+    },
+    {
+        "name": "Conversion Rate Optimizer",
+        "category": "Marketing",
+        "description": "Testa variações de copy e design para maximizar conversões."
+    },
+    {
+        "name": "Landing Page Analyzer",
+        "category": "Marketing",
+        "description": "Critica e sugere melhorias para páginas de captura."
+    },
+    {
+        "name": "Brand Voice Agent",
+        "category": "Marketing",
+        "description": "Garante que toda a comunicação mantenha o tom de voz da marca."
+    },
+    {
+        "name": "Social Media Analytics Agent",
+        "category": "Marketing",
+        "description": "Gera relatórios de engajamento e ROI social direto no Slack."
+    },
+    {
+        "name": "Operations Manager Agent",
+        "category": "Operations",
+        "description": "Coordena tarefas entre times e monitora prazos de entrega."
+    },
+    {
+        "name": "Process Automation Agent",
+        "category": "Operations",
+        "description": "Conecta ferramentas díspares para eliminar trabalho manual."
+    },
+    {
+        "name": "Data Cleaning Agent",
+        "category": "Operations",
+        "description": "Remove duplicatas e erros de bases de dados complexas."
+    },
+    {
+        "name": "Financial Forecast Agent",
+        "category": "Operations",
+        "description": "Prevê fluxo de caixa e necessidades financeiras futuras."
+    },
+    {
+        "name": "Budget Optimization Agent",
+        "category": "Operations",
+        "description": "Reduz desperdícios operacionais analisando notas fiscais."
+    },
+    {
+        "name": "Invoice Automation Agent",
+        "category": "Operations",
+        "description": "Gera e envia faturas para clientes após a conclusão do projeto."
+    },
+    {
+        "name": "HR Recruitment Agent",
+        "category": "Operations",
+        "description": "Filtra currículos e agenda entrevistas com candidatos ideais."
+    },
+    {
+        "name": "Employee Performance Agent",
+        "category": "Operations",
+        "description": "Acompanha KPIs e sugere treinamentos para o time."
+    },
+    {
+        "name": "Meeting Intelligence Agent",
+        "category": "Operations",
+        "description": "Resume reuniões e extrai listas de tarefas acionáveis."
+    },
+    {
+        "name": "Document Compliance Agent",
+        "category": "Operations",
+        "description": "Verifica se contratos e documentos seguem as normas LGPD."
+    },
+    {
+        "name": "Workflow Builder Agent",
+        "category": "Strategy",
+        "description": "Desenha fluxogramas de automação otimizados para o negócio."
+    },
+    {
+        "name": "CRM Automation Agent",
+        "category": "Strategy",
+        "description": "Mantém o CRM atualizado limpando dados obsoletos automaticamente."
+    },
+    {
+        "name": "Lead Enrichment Agent",
+        "category": "Strategy",
+        "description": "Encontra dados sociais e profissionais de novos leads."
+    },
+    {
+        "name": "Data Integration Agent",
+        "category": "Strategy",
+        "description": "Sincroniza dados entre plataformas de marketing e estoque."
+    },
+    {
+        "name": "API Automation Agent",
+        "category": "Strategy",
+        "description": "Gera código de conexão entre APIs complexas sem documentação."
+    },
+    {
+        "name": "Research Agent",
+        "category": "Strategy",
+        "description": "Realiza pesquisas de mercado profundas sobre qualquer tópico."
+    },
+    {
+        "name": "Market Intelligence Agent",
+        "category": "Strategy",
+        "description": "Transforma notícias do setor em insights estratégicos para o CEO."
+    },
+    {
+        "name": "Competitive Pricing Agent",
+        "category": "Strategy",
+        "description": "Analisa elasticidade de preço do mercado em tempo real."
+    },
+    {
+        "name": "Business Strategy Agent",
+        "category": "Strategy",
+        "description": "Sugere novos modelos de negócio baseados em dados internos."
+    },
+    {
+        "name": "Executive Decision Agent",
+        "category": "Strategy",
+        "description": "Simula cenários 'e se' para apoiar decisões de alto escalão."
+    }
+]
