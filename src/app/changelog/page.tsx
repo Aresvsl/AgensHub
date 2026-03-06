@@ -68,13 +68,13 @@ const releases = [
     },
 ]
 
-const typeIcons = {
+const typeIcons: Record<string, React.ReactNode> = {
     feature: <Sparkles className="w-3 h-3 text-[#6366F1]" />,
     improvement: <Zap className="w-3 h-3 text-amber-400" />,
     fix: <Bug className="w-3 h-3 text-emerald-400" />,
 }
 
-const typeColors = {
+const typeColors: Record<string, string> = {
     feature: "bg-[#6366F1]/10 text-[#6366F1] border-[#6366F1]/20",
     improvement: "bg-amber-500/10 text-amber-400 border-amber-500/20",
     fix: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
