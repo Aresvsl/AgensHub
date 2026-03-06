@@ -1,10 +1,18 @@
 import Stripe from 'stripe'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-    apiVersion: '2023-10-16' as any,
-    appInfo: {
-        name: 'AgensHub',
-        version: '0.1.0',
+let _stripe: Stripe | null = null
+
+export const stripe: Stripe = new Proxy({} as Stripe, {
+    get(_, prop) {
+        if (!_stripe) {
+            const key = process.env.STRIPE_SECRET_KEY
+            if (!key) throw new Error('STRIPE_SECRET_KEY is not set')
+            _stripe = new Stripe(key, {
+                apiVersion: '2023-10-16' as Stripe.LatestApiVersion,
+                appInfo: { name: 'AgensHub', version: '0.1.0' },
+            })
+        }
+        return (_stripe as any)[prop]
     },
 })
 
