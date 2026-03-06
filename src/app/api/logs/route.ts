@@ -3,6 +3,9 @@ import { NextRequest, NextResponse } from "next/server"
 
 export async function GET(request: NextRequest) {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {

@@ -4,6 +4,9 @@ import { NextResponse } from "next/server"
 
 export async function POST() {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {

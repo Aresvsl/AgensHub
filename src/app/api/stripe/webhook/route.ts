@@ -26,6 +26,9 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = await createSupabaseAdmin()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
 
     switch (event.type) {
         case "checkout.session.completed": {

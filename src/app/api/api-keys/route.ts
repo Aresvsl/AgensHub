@@ -13,6 +13,9 @@ function hashKey(key: string): string {
 
 export async function GET() {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {
@@ -34,6 +37,9 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {
@@ -85,6 +91,9 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {

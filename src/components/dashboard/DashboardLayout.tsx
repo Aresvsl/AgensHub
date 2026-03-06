@@ -90,7 +90,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <button onClick={async () => {
                         const { createSupabaseBrowser } = await import("@/lib/supabase-browser")
                         const supabase = createSupabaseBrowser()
-                        await supabase.auth.signOut()
+                        if (supabase) await supabase.auth.signOut()
                         window.location.href = "/"
                     }} className={`w-full flex items-center gap-3 h-9 rounded-xl text-[13px] font-medium text-[#9CA3AF] hover:text-red-400 hover:bg-red-400/5 transition-all ${collapsed ? "justify-center" : "px-3"}`}>
                         <LogOut className="w-[18px] h-[18px] flex-shrink-0" />

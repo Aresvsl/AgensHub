@@ -3,6 +3,9 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
     const supabase = await createSupabaseServer()
+    if (!supabase) {
+        return NextResponse.json({ error: "Service unavailable" }, { status: 503 })
+    }
     const { data, error } = await supabase
         .from("agents")
         .select("*")
