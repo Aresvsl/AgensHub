@@ -6,29 +6,24 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const metrics = [
-    { label: "Total Requests", value: "42.8k", change: "+18%", icon: Activity },
-    { label: "Active Users", value: "1,247", change: "+124", icon: Users },
-    { label: "Avg Response", value: "1.2s", change: "-0.3s", icon: Clock },
-    { label: "Revenue", value: "$12,480", change: "+22%", icon: TrendingUp },
+    { label: "Total Requests", value: "0", change: "0%", icon: Activity },
+    { label: "Active Users", value: "0", change: "0", icon: Users },
+    { label: "Avg Response", value: "0s", change: "0s", icon: Clock },
+    { label: "Revenue", value: "$0", change: "0%", icon: TrendingUp },
 ]
 
-const topAgents = [
-    { name: "Sales Closer AI", requests: 12400, success: 94, trend: [40, 55, 45, 65, 70, 80, 72, 85] },
-    { name: "Support Bot Pro", requests: 9800, success: 97, trend: [30, 35, 50, 45, 60, 55, 65, 70] },
-    { name: "Content Generator", requests: 5200, success: 89, trend: [20, 30, 25, 35, 40, 38, 45, 50] },
-    { name: "Lead Scoring Agent", requests: 3100, success: 92, trend: [15, 20, 25, 22, 30, 35, 32, 38] },
-]
+const topAgents: { name: string; requests: number; success: number; trend: number[] }[] = []
 
 const dailyData = [
-    { day: "Mon", value: 4200 },
-    { day: "Tue", value: 5800 },
-    { day: "Wed", value: 4900 },
-    { day: "Thu", value: 7200 },
-    { day: "Fri", value: 6800 },
-    { day: "Sat", value: 3400 },
-    { day: "Sun", value: 2900 },
+    { day: "Mon", value: 0 },
+    { day: "Tue", value: 0 },
+    { day: "Wed", value: 0 },
+    { day: "Thu", value: 0 },
+    { day: "Fri", value: 0 },
+    { day: "Sat", value: 0 },
+    { day: "Sun", value: 0 },
 ]
-const maxDaily = Math.max(...dailyData.map(d => d.value))
+const maxDaily = Math.max(1, ...dailyData.map(d => d.value))
 
 export default function AnalyticsPage() {
     return (
@@ -118,9 +113,9 @@ export default function AnalyticsPage() {
                 <h3 className="text-[16px] font-semibold text-white mb-6">Usage Breakdown</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { label: "API Calls", used: 28400, limit: 50000, color: "bg-[#6366F1]" },
-                        { label: "Storage", used: 2.4, limit: 10, unit: "GB", color: "bg-[#8B5CF6]" },
-                        { label: "Agents Deployed", used: 12, limit: 25, color: "bg-emerald-500" },
+                        { label: "API Calls", used: 0, limit: 50000, color: "bg-[#6366F1]" },
+                        { label: "Storage", used: 0, limit: 10, unit: "GB", color: "bg-[#8B5CF6]" },
+                        { label: "Agents Deployed", used: 0, limit: 25, color: "bg-emerald-500" },
                     ].map((item, i) => (
                         <div key={i} className="space-y-3">
                             <div className="flex justify-between text-[13px]">
