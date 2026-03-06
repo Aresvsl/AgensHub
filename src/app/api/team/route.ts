@@ -64,11 +64,13 @@ export async function POST(request: NextRequest) {
         team = newTeam
     }
 
+    const teamId = team!.id
+
     // Invite member
     const { data, error } = await supabase
         .from("team_members")
         .insert({
-            team_id: team.id,
+            team_id: teamId,
             email,
             role,
             status: "pending",
