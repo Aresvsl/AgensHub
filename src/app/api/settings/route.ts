@@ -52,11 +52,36 @@ export async function PUT(request: NextRequest) {
 
     const body = await request.json()
 
+    // FIXED: Whitelist allowed fields to prevent injecting arbitrary columns
+    // (e.g. user_id, updated_at, or any future sensitive fields)
+    const ALLOWED_FIELDS = [
+        "workspace_name",
+        "timezone",
+        "language",
+        "theme",
+        "sidebar_collapsed",
+        "notifications",
+    ] as const
+
+    type AllowedField = typeof ALLOWED_FIELDS[number]
+
+    const sanitized = ALLOWED_FIELDS.reduce<Partial<Record<AllowedField, unknown>>>(
+        (acc, field) => {
+            if (field in body) acc[field] = body[field]
+            return acc
+        },
+        {}
+    )
+
+    if (Object.keys(sanitized).length === 0) {
+        return NextResponse.json({ error: "No valid fields provided" }, { status: 400 })
+    }
+
     const { data, error } = await supabase
         .from("user_settings")
         .upsert({
             user_id: user.id,
-            ...body,
+            ...sanitized,
             updated_at: new Date().toISOString(),
         })
         .select()

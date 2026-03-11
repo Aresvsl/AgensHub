@@ -112,6 +112,24 @@ export async function DELETE(request: NextRequest) {
         return NextResponse.json({ error: "Member ID required" }, { status: 400 })
     }
 
+    // FIXED: Verify the member belongs to a team owned by the current user
+    // before deleting. Without this check, any authenticated user could
+    // delete members from any team by guessing a member UUID.
+    const { data: member } = await supabase
+        .from("team_members")
+        .select("team_id, teams!inner(owner_id)")
+        .eq("id", memberId)
+        .single()
+
+    if (!member) {
+        return NextResponse.json({ error: "Member not found" }, { status: 404 })
+    }
+
+    const team = member.teams as unknown as { owner_id: string }
+    if (team.owner_id !== user.id) {
+        return NextResponse.json({ error: "Forbidden" }, { status: 403 })
+    }
+
     const { error } = await supabase
         .from("team_members")
         .delete()

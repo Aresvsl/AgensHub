@@ -16,20 +16,23 @@ export const stripe: Stripe = new Proxy({} as Stripe, {
     },
 })
 
+// FIXED: Price IDs are loaded from environment variables instead of
+// hardcoded placeholder strings. Set these in your .env.local file
+// with the real Price IDs from your Stripe dashboard.
 export const PLANS = {
     starter: {
         name: 'Starter',
-        priceId: 'price_starter_id',
+        priceId: process.env.STRIPE_PRICE_STARTER ?? '',
         price: 29,
     },
     pro: {
         name: 'Pro',
-        priceId: 'price_pro_id',
+        priceId: process.env.STRIPE_PRICE_PRO ?? '',
         price: 49,
     },
     agency: {
         name: 'Agency',
-        priceId: 'price_agency_id',
+        priceId: process.env.STRIPE_PRICE_AGENCY ?? '',
         price: 99,
     },
 }

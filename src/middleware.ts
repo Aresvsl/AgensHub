@@ -49,8 +49,15 @@ export async function middleware(request: NextRequest) {
         if (!user) {
             return NextResponse.redirect(new URL('/login', request.url))
         }
-        // Check admin role via user metadata
-        const isAdmin = user.user_metadata?.role === 'admin'
+        // FIXED: Check admin role via profiles table, NOT user_metadata
+        // user_metadata can be changed by the user themselves via updateUser()
+        const { data: profile } = await supabase
+            .from('profiles')
+            .select('role')
+            .eq('id', user.id)
+            .single()
+
+        const isAdmin = profile?.role === 'admin'
         if (!isAdmin) {
             return NextResponse.redirect(new URL('/dashboard', request.url))
         }
